@@ -74,7 +74,15 @@ Panel {
     return null
   }
   // A pack (Island Panels) is several plugins installed and removed together.
-  function members(p) { return Array.isArray(p.pack) ? p.pack : [p] }
+  // A row's entry comes through the Repeater's modelData, where `pack` is a
+  // QVariantList that Array.isArray rejects: test for a length instead.
+  function members(p) {
+    var pack = p ? p.pack : null
+    if (!pack || typeof pack.length !== "number" || pack.length === 0) return [p]
+    var list = []
+    for (var i = 0; i < pack.length; i++) list.push(pack[i])
+    return list
+  }
   function stateOf(p) {
     if (p.self) return "self"
     var list = members(p), on = 0, off = 0
