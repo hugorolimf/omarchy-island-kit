@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Shapes
 import qs.Commons
-// Local copy of Commons/BorderGeometry.js: hugo.ui is imported by path, so
+// Local copy of Commons/BorderGeometry.js: ui/ is imported by path, so
 // a "../Commons" import would resolve under ~/.config/omarchy/plugins.
 import "BorderGeometry.js" as Geometry
 

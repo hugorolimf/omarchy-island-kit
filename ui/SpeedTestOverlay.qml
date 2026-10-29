@@ -5,7 +5,7 @@ import Quickshell
 import Quickshell.Wayland
 import qs.Commons
 import qs.Commons as Commons
-// Sibling hugo.ui types resolve through this directory's qmldir.
+// Sibling ui/ types resolve through this directory's qmldir.
 
 // Centered speed test overlay shared by the network and disk speed tests. No
 // card: like the Tucson's floating cluster, the two dials sit directly on a

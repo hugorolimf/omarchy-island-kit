@@ -1,8 +1,7 @@
 pragma Singleton
 import QtQuick
 
-// "anatomy" design tokens for the hugo.* panels (approved prototype:
-// ~/prototipo-barra-anatomy.html, skill ~/.claude/skills/anatomy). Grey stroke
+// "anatomy" design tokens for the Island plugins. Grey stroke
 // tones for structure, colour only for state (red alert, green ok, blue
 // action/selection, amber attention), mono small caps for labels, strong
 // numbers, and one easing curve for every transition.
@@ -94,8 +93,8 @@ QtObject {
     calendar: "M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM4 10h16M8 3v4M16 3v4",
     chevronLeft: "M14.5 6l-6 6 6 6",
     chevronRight: "M9.5 6l6 6-6 6",
-    // Audio, network and Bluetooth panels (hugo.audio / hugo.network /
-    // hugo.bluetooth); same paths as hugo.bar and the prototype.
+    // Audio, network and Bluetooth panels (Island Panels); same paths as
+    // Island Bar.
     speaker: "M4 9.5h3.5L12 5.5v13l-4.5-4H4z",
     wave1: "M15.5 9.2a4 4 0 0 1 0 5.6",
     wave2: "M18 7a7 7 0 0 1 0 10",

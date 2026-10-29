@@ -1,8 +1,8 @@
 import QtQuick
 import QtQuick.Shapes
 
-// Stroke icon on the anatomy 24-unit grid (same path language as hugo.bar
-// and the prototype): monochrome, round caps, colour only for state.
+// Stroke icon on the anatomy 24-unit grid (same path language as Island
+// Bar): monochrome, round caps, colour only for state.
 //   AnatomyIcon { path: Anatomy.icons.monitor; size: 16 }
 // `paths` is joined into one ShapePath, so every part shares one colour.
 Item {

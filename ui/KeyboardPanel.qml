@@ -309,7 +309,7 @@ PanelWindow {
       for (var i = targets.length - 1; i >= 0; i--) {
         var target = targets[i]
         if (!target || !target.triggerPress || target.visible === false || target.opacity === 0 || !target.mapToItem) continue
-        // a widget folded into hugo.bar's drawer is disabled but keeps its
+        // a widget folded into Island Bar's drawer is disabled but keeps its
         // button's size beside the next icon: it must not take this click
         if (target.enabled === false) continue
         if (root.bar.targetBelongsToWindow && !root.bar.targetBelongsToWindow(target, root.anchorWindow)) continue
