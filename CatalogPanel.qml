@@ -73,11 +73,19 @@ Panel {
     for (var i = 0; i < installedList.length; i++) if (installedList[i].id === id) return installedList[i]
     return null
   }
+  // A pack (Island Panels) is several plugins installed and removed together.
+  function members(p) { return Array.isArray(p.pack) ? p.pack : [p] }
   function stateOf(p) {
     if (p.self) return "self"
-    if (busy[p.id]) return busy[p.id]
-    var i = info(p.id)
-    if (i) return i.enabled === true ? "installed" : "disabled"
+    var list = members(p), on = 0, off = 0
+    for (var k = 0; k < list.length; k++) {
+      if (busy[list[k].id]) return busy[list[k].id]
+      var i = info(list[k].id)
+      if (i) { if (i.enabled === true) on++; else off++ }
+    }
+    if (on === list.length) return "installed"
+    if (on + off === list.length) return "disabled"
+    if (on + off > 0 && p.status === "published") return "available"
     if (p.status !== "published") return "soon"
     return p.external ? "view" : "available"
   }
@@ -116,12 +124,22 @@ Panel {
         : ["omarchy", "plugin", "enable", job.id]
     actionProc.running = true
   }
-  function install(p) { enqueue({ id: p.id, kind: "install", repo: p.repo }) }
+  function install(p) {
+    var list = members(p)
+    for (var k = 0; k < list.length; k++)
+      if (!info(list[k].id)) enqueue({ id: list[k].id, kind: "install", repo: list[k].repo })
+  }
   function installAll() {
     var list = installable
     for (var i = 0; i < list.length; i++) install(list[i])
   }
-  function enable(p) { enqueue({ id: p.id, kind: "enable" }) }
+  function enable(p) {
+    var list = members(p)
+    for (var k = 0; k < list.length; k++) {
+      var i = info(list[k].id)
+      if (i && i.enabled !== true) enqueue({ id: list[k].id, kind: "enable" })
+    }
+  }
   function remove(p) {
     if (confirmRemove !== p.id) {
       confirmRemove = p.id
@@ -129,7 +147,9 @@ Panel {
       return
     }
     confirmRemove = ""
-    enqueue({ id: p.id, kind: "remove" })
+    var list = members(p)
+    for (var k = 0; k < list.length; k++)
+      if (info(list[k].id)) enqueue({ id: list[k].id, kind: "remove" })
   }
   function view(p) { Qt.openUrlExternally(p.repo) }
   Timer { id: confirmTimer; interval: 3000; onTriggered: root.confirmRemove = "" }
@@ -459,7 +479,11 @@ Panel {
     id: row
     property var entry: ({})
     readonly property string state: root.stateOf(entry)
-    readonly property string error: root.errors[entry.id] || ""
+    readonly property string error: {
+      var list = root.members(entry)
+      for (var k = 0; k < list.length; k++) if (root.errors[list[k].id]) return root.errors[list[k].id]
+      return ""
+    }
     readonly property bool confirming: root.confirmRemove === entry.id
     readonly property bool canRemove: (state === "installed" || state === "disabled")
 

@@ -69,18 +69,44 @@
       "id": "io.github.hugorolimf.panels",
       "section": "island",
       "name": "Island Panels",
-      "repo": "https://github.com/hugorolimf/omarchy-island-panels",
-      "status": "soon",
+      "repo": "https://github.com/hugorolimf/omarchy-island-audio",
+      "status": "published",
       "icon": "M5 7h14M5 12h14M5 17h14M9 5v4M15 10v4M11 15v4",
-      "pt": "Painéis de som, Bluetooth, rede, bateria, tela e clima",
-      "en": "Sound, Bluetooth, network, battery, display and weather panels"
+      "pt": "Seis painéis: som, Bluetooth, rede, bateria, tela e clima",
+      "en": "Six panels: sound, Bluetooth, network, battery, display and weather",
+      "pack": [
+        {
+          "id": "io.github.hugorolimf.audio",
+          "repo": "https://github.com/hugorolimf/omarchy-island-audio"
+        },
+        {
+          "id": "io.github.hugorolimf.bluetooth",
+          "repo": "https://github.com/hugorolimf/omarchy-island-bluetooth"
+        },
+        {
+          "id": "io.github.hugorolimf.network",
+          "repo": "https://github.com/hugorolimf/omarchy-island-network"
+        },
+        {
+          "id": "io.github.hugorolimf.power",
+          "repo": "https://github.com/hugorolimf/omarchy-island-power"
+        },
+        {
+          "id": "io.github.hugorolimf.monitor",
+          "repo": "https://github.com/hugorolimf/omarchy-island-display"
+        },
+        {
+          "id": "io.github.hugorolimf.weather",
+          "repo": "https://github.com/hugorolimf/omarchy-island-weather"
+        }
+      ]
     },
     {
       "id": "io.github.hugorolimf.inbox",
       "section": "island",
       "name": "Island Inbox",
       "repo": "https://github.com/hugorolimf/omarchy-island-inbox",
-      "status": "soon",
+      "status": "published",
       "icon": "M4 13l2-7h12l2 7v5H4zM4 13h5l1 2h4l1-2h5",
       "pt": "Histórico de notificações agrupado por app, num sino",
       "en": "Notification history grouped by app, behind a bell"
@@ -90,7 +116,7 @@
       "section": "island",
       "name": "Island AI Usage",
       "repo": "https://github.com/hugorolimf/omarchy-island-ai-usage",
-      "status": "soon",
+      "status": "published",
       "icon": "M12 4l1.8 4.6L18.5 10l-4.7 1.4L12 16l-1.8-4.6L5.5 10l4.7-1.4zM18 16l.7 1.8 1.8.7-1.8.7L18 21l-.7-1.8-1.8-.7 1.8-.7z",
       "pt": "Limites e uso do Claude Code, Codex e outros",
       "en": "Limits and usage of Claude Code, Codex and more"
