@@ -167,7 +167,7 @@
       "name": "Glass Pill",
       "external": true,
       "repo": "https://github.com/hugorolimf/voxtype-glass-pill",
-      "status": "soon",
+      "status": "published",
       "icon": "@mic",
       "pt": "Ditado por voz (voxtype) com uma pílula de vidro na tela",
       "en": "Voice dictation (voxtype) with a glass pill on screen"
@@ -178,7 +178,7 @@
       "name": "Smart Windows",
       "external": true,
       "repo": "https://github.com/hugorolimf/omarchy-smart-windows",
-      "status": "soon",
+      "status": "published",
       "icon": "M4 5h7v14H4zM13 5h7v6h-7zM13 13h7v6h-7z",
       "pt": "Janelas que encaixam nas bordas e se organizam sozinhas",
       "en": "Windows that snap to the edges and arrange themselves"
@@ -188,8 +188,8 @@
       "section": "extras",
       "name": "Organizador",
       "external": true,
-      "repo": "https://github.com/hugorolimf/omarchy-organizador",
-      "status": "soon",
+      "repo": "https://github.com/hugorolimf/organizador",
+      "status": "published",
       "icon": "M3 7h6l2 2h10v10H3z",
       "pt": "Arruma a pasta Downloads com uma IA local (Ollama)",
       "en": "Tidies your Downloads folder with a local AI (Ollama)"
