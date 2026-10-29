@@ -250,6 +250,7 @@ Panel {
             width: parent.width
             height: Style.space(30)
             Text {
+              textFormat: Text.PlainText
               anchors.verticalCenter: parent.verticalCenter
               text: root.t.title
               color: Anatomy.strong
@@ -258,6 +259,7 @@ Panel {
               font.weight: Font.DemiBold
             }
             Text {
+              textFormat: Text.PlainText
               anchors.right: parent.right
               anchors.rightMargin: Style.space(2)
               anchors.verticalCenter: parent.verticalCenter
@@ -327,6 +329,7 @@ Panel {
           }
 
           Text {
+            textFormat: Text.PlainText
             visible: root.searching && root.catalog.plugins.filter(root.matches).length === 0
             width: parent.width
             topPadding: Style.space(14)
@@ -369,6 +372,7 @@ Panel {
             border.width: Anatomy.hairline
             border.color: Anatomy.selectedRim
             Text {
+              textFormat: Text.PlainText
               anchors.left: parent.left
               anchors.leftMargin: Style.space(10)
               anchors.right: restartChip.left
@@ -393,6 +397,7 @@ Panel {
           }
 
           Text {
+            textFormat: Text.PlainText
             width: parent.width
             topPadding: Style.space(10)
             bottomPadding: Style.space(2)
@@ -416,6 +421,7 @@ Panel {
     Rectangle { width: parent.width; height: 1; color: Anatomy.rule; anchors.top: parent.top; anchors.topMargin: Style.space(4) }
     Text {
       id: label
+      textFormat: Text.PlainText
       anchors.bottom: parent.bottom
       anchors.bottomMargin: Style.space(4)
       color: Anatomy.muted
@@ -425,6 +431,7 @@ Panel {
       font.letterSpacing: Anatomy.labelSpacing
     }
     Text {
+      textFormat: Text.PlainText
       visible: parent.hint !== ""
       anchors.right: parent.right
       anchors.rightMargin: Style.space(2)
@@ -464,6 +471,7 @@ Panel {
         color: chip.accent && chip.enabledChip ? Anatomy.blue : Anatomy.muted
       }
       Text {
+        textFormat: Text.PlainText
         anchors.verticalCenter: parent.verticalCenter
         text: chip.label
         color: chip.enabledChip ? Anatomy.text : Anatomy.muted
@@ -531,6 +539,7 @@ Panel {
       spacing: 1
       opacity: row.state === "soon" ? 0.6 : 1
       Text {
+        textFormat: Text.PlainText
         width: parent.width
         text: row.entry.name || ""
         color: Anatomy.strong
@@ -540,6 +549,7 @@ Panel {
         elide: Text.ElideRight
       }
       Text {
+        textFormat: Text.PlainText
         width: parent.width
         text: row.error !== "" ? root.t.failed + row.error : (root.pt ? row.entry.pt : row.entry.en) || ""
         color: row.error !== "" ? Anatomy.red : Anatomy.muted
@@ -607,6 +617,7 @@ Panel {
       }
       Text {
         id: statusText
+        textFormat: Text.PlainText
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
         visible: !actionChip.visible
