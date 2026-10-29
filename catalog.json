@@ -1,92 +1,170 @@
 {
   "version": 1,
   "sections": [
-    { "id": "island", "pt": "ISLAND", "en": "ISLAND", "hint_pt": "BARRA E PAINÉIS", "hint_en": "BAR AND PANELS" },
-    { "id": "glass", "pt": "GLASS", "en": "GLASS", "hint_pt": "LIQUID GLASS", "hint_en": "LIQUID GLASS" },
-    { "id": "extras", "pt": "EXTRAS", "en": "EXTRAS", "hint_pt": "FORA DA BARRA", "hint_en": "OUTSIDE THE BAR" }
+    {
+      "id": "island",
+      "pt": "ISLAND",
+      "en": "ISLAND",
+      "hint_pt": "BARRA E PAINÉIS",
+      "hint_en": "BAR AND PANELS"
+    },
+    {
+      "id": "glass",
+      "pt": "GLASS",
+      "en": "GLASS",
+      "hint_pt": "LIQUID GLASS",
+      "hint_en": "LIQUID GLASS"
+    },
+    {
+      "id": "extras",
+      "pt": "EXTRAS",
+      "en": "EXTRAS",
+      "hint_pt": "FORA DA BARRA",
+      "hint_en": "OUTSIDE THE BAR"
+    }
   ],
   "plugins": [
     {
-      "id": "io.github.hugorolimf.kit", "section": "island", "name": "Island Kit", "self": true,
-      "repo": "https://github.com/hugorolimf/omarchy-island-kit", "status": "published", "icon": "@sparkle",
+      "id": "io.github.hugorolimf.kit",
+      "section": "island",
+      "name": "Island Kit",
+      "self": true,
+      "repo": "https://github.com/hugorolimf/omarchy-island-kit",
+      "status": "published",
+      "icon": "@sparkle",
       "pt": "Este catálogo e a base visual dos plugins Island",
       "en": "This catalog and the shared look of the Island plugins"
     },
     {
-      "id": "io.github.hugorolimf.bar", "section": "island", "name": "Island Bar",
-      "repo": "https://github.com/hugorolimf/omarchy-bar", "status": "soon", "icon": "M3 5h18v4H3zM6 7h3M15 7h3",
+      "id": "io.github.hugorolimf.bar",
+      "section": "island",
+      "name": "Island Bar",
+      "repo": "https://github.com/hugorolimf/omarchy-bar",
+      "status": "published",
+      "icon": "M3 5h18v4H3zM6 7h3M15 7h3",
       "pt": "Barra em ilhas, ícones em traço, dicas e gaveta de ferramentas",
       "en": "Bar in islands, stroke icons, tooltips and a tools drawer"
     },
     {
-      "id": "io.github.hugorolimf.island", "section": "island", "name": "Island Notch",
-      "repo": "https://github.com/hugorolimf/omarchy-island-notch", "status": "soon", "icon": "M3 5h18M8 5v2a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V5",
+      "id": "io.github.hugorolimf.island",
+      "section": "island",
+      "name": "Island Notch",
+      "repo": "https://github.com/hugorolimf/omarchy-island-notch",
+      "status": "soon",
+      "icon": "M3 5h18M8 5v2a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V5",
       "pt": "Notch no centro da barra: ditado, música, gravação, avisos",
       "en": "Notch in the middle of the bar: dictation, music, recording, alerts"
     },
     {
-      "id": "io.github.hugorolimf.iphone", "section": "island", "name": "Island iPhone",
-      "repo": "https://github.com/hugorolimf/omarchy-island-iphone", "status": "soon", "icon": "@phone",
+      "id": "io.github.hugorolimf.iphone",
+      "section": "island",
+      "name": "Island iPhone",
+      "repo": "https://github.com/hugorolimf/omarchy-island-iphone",
+      "status": "soon",
+      "icon": "@phone",
       "pt": "iPhone na barra pelo Tether: bateria, mensagens e respostas",
       "en": "Your iPhone on the bar through Tether: battery, messages, replies"
     },
     {
-      "id": "io.github.hugorolimf.panels", "section": "island", "name": "Island Panels",
-      "repo": "https://github.com/hugorolimf/omarchy-island-panels", "status": "soon", "icon": "M5 7h14M5 12h14M5 17h14M9 5v4M15 10v4M11 15v4",
+      "id": "io.github.hugorolimf.panels",
+      "section": "island",
+      "name": "Island Panels",
+      "repo": "https://github.com/hugorolimf/omarchy-island-panels",
+      "status": "soon",
+      "icon": "M5 7h14M5 12h14M5 17h14M9 5v4M15 10v4M11 15v4",
       "pt": "Painéis de som, Bluetooth, rede, bateria, tela e clima",
       "en": "Sound, Bluetooth, network, battery, display and weather panels"
     },
     {
-      "id": "io.github.hugorolimf.inbox", "section": "island", "name": "Island Inbox",
-      "repo": "https://github.com/hugorolimf/omarchy-island-inbox", "status": "soon", "icon": "M4 13l2-7h12l2 7v5H4zM4 13h5l1 2h4l1-2h5",
+      "id": "io.github.hugorolimf.inbox",
+      "section": "island",
+      "name": "Island Inbox",
+      "repo": "https://github.com/hugorolimf/omarchy-island-inbox",
+      "status": "soon",
+      "icon": "M4 13l2-7h12l2 7v5H4zM4 13h5l1 2h4l1-2h5",
       "pt": "Histórico de notificações agrupado por app, num sino",
       "en": "Notification history grouped by app, behind a bell"
     },
     {
-      "id": "io.github.hugorolimf.agents", "section": "island", "name": "Island AI Usage",
-      "repo": "https://github.com/hugorolimf/omarchy-island-ai-usage", "status": "soon", "icon": "M12 4l1.8 4.6L18.5 10l-4.7 1.4L12 16l-1.8-4.6L5.5 10l4.7-1.4zM18 16l.7 1.8 1.8.7-1.8.7L18 21l-.7-1.8-1.8-.7 1.8-.7z",
+      "id": "io.github.hugorolimf.agents",
+      "section": "island",
+      "name": "Island AI Usage",
+      "repo": "https://github.com/hugorolimf/omarchy-island-ai-usage",
+      "status": "soon",
+      "icon": "M12 4l1.8 4.6L18.5 10l-4.7 1.4L12 16l-1.8-4.6L5.5 10l4.7-1.4zM18 16l.7 1.8 1.8.7-1.8.7L18 21l-.7-1.8-1.8-.7 1.8-.7z",
       "pt": "Limites e uso do Claude Code, Codex e outros",
       "en": "Limits and usage of Claude Code, Codex and more"
     },
     {
-      "id": "io.github.hugorolimf.clock", "section": "island", "name": "Island Clock",
-      "repo": "https://github.com/hugorolimf/omarchy-clock", "status": "published", "icon": "M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16zM12 8v4l3 2",
+      "id": "io.github.hugorolimf.clock",
+      "section": "island",
+      "name": "Island Clock",
+      "repo": "https://github.com/hugorolimf/omarchy-clock",
+      "status": "published",
+      "icon": "M12 4a8 8 0 1 0 0 16a8 8 0 1 0 0-16zM12 8v4l3 2",
       "pt": "Data discreta, hora em destaque e minutos que viram",
       "en": "Quiet date, bright time and minutes that flip in"
     },
     {
-      "id": "io.github.hugorolimf.dock", "section": "glass", "name": "Glass Dock",
-      "repo": "https://github.com/hugorolimf/omarchy-dock", "status": "published", "icon": "M3 15.5h18V20H3zM7 12V8h3v4M14 12V6h3v6",
+      "id": "io.github.hugorolimf.dock",
+      "section": "glass",
+      "name": "Glass Dock",
+      "repo": "https://github.com/hugorolimf/omarchy-dock",
+      "status": "published",
+      "icon": "M3 15.5h18V20H3zM7 12V8h3v4M14 12V6h3v6",
       "pt": "Dock estilo macOS com Liquid Glass, ampliação e áreas de trabalho",
       "en": "macOS-style dock with Liquid Glass, magnification and workspaces"
     },
     {
-      "id": "io.github.hugorolimf.alttab", "section": "glass", "name": "Glass Alt+Tab",
-      "repo": "https://github.com/hugorolimf/omarchy-alttab", "status": "published", "icon": "M4 7h11v9H4zM9 4h11v9h-2",
+      "id": "io.github.hugorolimf.alttab",
+      "section": "glass",
+      "name": "Glass Alt+Tab",
+      "repo": "https://github.com/hugorolimf/omarchy-alttab",
+      "status": "published",
+      "icon": "M4 7h11v9H4zM9 4h11v9h-2",
       "pt": "Trocar de janela com miniaturas ao vivo",
       "en": "Switch windows with live thumbnails"
     },
     {
-      "id": "io.github.hugorolimf.notifications", "section": "glass", "name": "Glass Notifications",
-      "repo": "https://github.com/hugorolimf/omarchy-notifications", "status": "published", "icon": "@bell",
+      "id": "io.github.hugorolimf.notifications",
+      "section": "glass",
+      "name": "Glass Notifications",
+      "repo": "https://github.com/hugorolimf/omarchy-notifications",
+      "status": "published",
+      "icon": "@bell",
       "pt": "Notificações estilo macOS com Liquid Glass",
       "en": "macOS-style notifications with Liquid Glass"
     },
     {
-      "id": "glass-pill", "section": "extras", "name": "Glass Pill", "external": true,
-      "repo": "https://github.com/hugorolimf/voxtype-glass-pill", "status": "soon", "icon": "@mic",
+      "id": "glass-pill",
+      "section": "extras",
+      "name": "Glass Pill",
+      "external": true,
+      "repo": "https://github.com/hugorolimf/voxtype-glass-pill",
+      "status": "soon",
+      "icon": "@mic",
       "pt": "Ditado por voz (voxtype) com uma pílula de vidro na tela",
       "en": "Voice dictation (voxtype) with a glass pill on screen"
     },
     {
-      "id": "smart-windows", "section": "extras", "name": "Smart Windows", "external": true,
-      "repo": "https://github.com/hugorolimf/omarchy-smart-windows", "status": "soon", "icon": "M4 5h7v14H4zM13 5h7v6h-7zM13 13h7v6h-7z",
+      "id": "smart-windows",
+      "section": "extras",
+      "name": "Smart Windows",
+      "external": true,
+      "repo": "https://github.com/hugorolimf/omarchy-smart-windows",
+      "status": "soon",
+      "icon": "M4 5h7v14H4zM13 5h7v6h-7zM13 13h7v6h-7z",
       "pt": "Janelas que encaixam nas bordas e se organizam sozinhas",
       "en": "Windows that snap to the edges and arrange themselves"
     },
     {
-      "id": "organizador", "section": "extras", "name": "Organizador", "external": true,
-      "repo": "https://github.com/hugorolimf/omarchy-organizador", "status": "soon", "icon": "M3 7h6l2 2h10v10H3z",
+      "id": "organizador",
+      "section": "extras",
+      "name": "Organizador",
+      "external": true,
+      "repo": "https://github.com/hugorolimf/omarchy-organizador",
+      "status": "soon",
+      "icon": "M3 7h6l2 2h10v10H3z",
       "pt": "Arruma a pasta Downloads com uma IA local (Ollama)",
       "en": "Tidies your Downloads folder with a local AI (Ollama)"
     }
