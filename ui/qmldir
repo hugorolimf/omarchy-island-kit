@@ -34,3 +34,4 @@ WidgetButton 1.0 WidgetButton.qml
 singleton Anatomy 1.0 Anatomy.qml
 AnatomyIcon 1.0 AnatomyIcon.qml
 AnatomyLift 1.0 AnatomyLift.qml
+StateHero 1.0 StateHero.qml
