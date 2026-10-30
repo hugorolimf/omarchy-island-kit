@@ -36,7 +36,7 @@ Click the puzzle icon in the bar, or run
 
 | Island (uses this Kit) | Glass (works on its own) | Extras (outside the bar) |
 |---|---|---|
-| Island Bar · Island Notch · Island iPhone · Island Panels · Island Inbox · Island AI Usage · Island Clock | [Glass Dock](https://github.com/hugorolimf/omarchy-dock) · [Glass Alt+Tab](https://github.com/hugorolimf/omarchy-alttab) · [Glass Notifications](https://github.com/hugorolimf/omarchy-notifications) | Glass Pill · Smart Windows · Organizador |
+| Island Bar · Island Notch · Island iPhone · Island Panels · Island Inbox · Island AI Usage · Island Clock | [Glass Dock](https://github.com/hugorolimf/omarchy-dock) · [Glass Alt+Tab](https://github.com/hugorolimf/omarchy-alttab) | Glass Pill · Smart Windows · Organizador |
 
 Plugins not released yet show as *Soon*. Extras are not shell plugins; their row
 opens their install page.

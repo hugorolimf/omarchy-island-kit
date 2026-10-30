@@ -52,8 +52,11 @@
       "repo": "https://github.com/hugorolimf/omarchy-island-notch",
       "status": "published",
       "icon": "M3 5h18M8 5v2a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3V5",
-      "pt": "Notch no centro da barra: ditado, música, gravação, avisos",
-      "en": "Notch in the middle of the bar: dictation, music, recording, alerts"
+      "pt": "Notch no centro da barra: notificações, ditado, música, gravação e o Claude Code",
+      "en": "Notch in the middle of the bar: notifications, dictation, music, recording and Claude Code",
+      "takesOver": [
+        "omarchy.notifications"
+      ]
     },
     {
       "id": "io.github.hugorolimf.iphone",
@@ -150,16 +153,6 @@
       "icon": "M4 7h11v9H4zM9 4h11v9h-2",
       "pt": "Trocar de janela com miniaturas ao vivo",
       "en": "Switch windows with live thumbnails"
-    },
-    {
-      "id": "io.github.hugorolimf.notifications",
-      "section": "glass",
-      "name": "Glass Notifications",
-      "repo": "https://github.com/hugorolimf/omarchy-notifications",
-      "status": "published",
-      "icon": "@bell",
-      "pt": "Notificações estilo macOS com Liquid Glass",
-      "en": "macOS-style notifications with Liquid Glass"
     },
     {
       "id": "glass-pill",

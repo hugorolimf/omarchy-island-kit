@@ -129,13 +129,22 @@ Panel {
       ? ["omarchy", "plugin", "add", job.repo, "--enable", "--yes"]
       : job.kind === "remove"
         ? ["omarchy", "plugin", "remove", job.id, "--yes"]
-        : ["omarchy", "plugin", "enable", job.id]
+        : job.kind === "disable"
+          ? ["omarchy", "plugin", "disable", job.id]
+          : ["omarchy", "plugin", "enable", job.id]
     actionProc.running = true
   }
+  // A plugin that does a built-in's job lists it in "takesOver": installing
+  // it switches the built-in off, removing it switches it back on.
+  function takesOver(entry) { return Array.isArray(entry.takesOver) ? entry.takesOver : [] }
   function install(p) {
     var list = members(p)
-    for (var k = 0; k < list.length; k++)
-      if (!info(list[k].id)) enqueue({ id: list[k].id, kind: "install", repo: list[k].repo })
+    for (var k = 0; k < list.length; k++) {
+      if (info(list[k].id)) continue
+      enqueue({ id: list[k].id, kind: "install", repo: list[k].repo })
+      var over = takesOver(list[k])
+      for (var j = 0; j < over.length; j++) enqueue({ id: String(over[j]), kind: "disable" })
+    }
   }
   function installAll() {
     var list = installable
@@ -156,8 +165,12 @@ Panel {
     }
     confirmRemove = ""
     var list = members(p)
-    for (var k = 0; k < list.length; k++)
-      if (info(list[k].id)) enqueue({ id: list[k].id, kind: "remove" })
+    for (var k = 0; k < list.length; k++) {
+      if (!info(list[k].id)) continue
+      enqueue({ id: list[k].id, kind: "remove" })
+      var over = takesOver(list[k])
+      for (var j = 0; j < over.length; j++) enqueue({ id: String(over[j]), kind: "enable" })
+    }
   }
   function view(p) { Qt.openUrlExternally(p.repo) }
   Timer { id: confirmTimer; interval: 3000; onTriggered: root.confirmRemove = "" }
