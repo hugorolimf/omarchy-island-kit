@@ -23,13 +23,21 @@ look the Island plugins are built on.
   load.
 - 🌍 English and Portuguese, following your system language.
 
+## See it
+
+Recorded on a real desktop, mouse included; this take is in Portuguese. The
+catalog opens from the toolcase in Island Bar: what's installed, what's
+available, and the extras that live outside the bar.
+
+![The catalog](assets/catalog.gif)
+
 ## Install
 
 ```bash
 omarchy plugin add https://github.com/hugorolimf/omarchy-island-kit --enable
 ```
 
-Click the puzzle icon in the bar, or run
+Click its icon in the bar (a toolcase in its own pill with [Island Bar](https://github.com/hugorolimf/omarchy-bar)), or run
 `omarchy-shell io.github.hugorolimf.kit toggle`.
 
 ## What's in the catalog
