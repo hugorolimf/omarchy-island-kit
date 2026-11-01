@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "id": "io.github.hugorolimf.kit",
   "name": "Island Kit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Hugo Rolim Filho",
   "license": "MIT",
   "homepage": "https://github.com/hugorolimf/omarchy-island-kit",
-  "description": "A catalog that installs the Island and Glass plugins in one place, and the shared look the Island plugins are built on",
+  "description": "A catalog that installs and updates the Island and Glass plugins in one place, and the shared look the Island plugins are built on",
   "kinds": [
     "bar-widget"
   ],
@@ -15,7 +15,7 @@
   },
   "barWidget": {
     "displayName": "Island Kit",
-    "description": "Catalog of the Island and Glass plugins: install, enable or remove them",
+    "description": "Catalog of the Island and Glass plugins: install, update, enable or remove them",
     "category": "Workflow",
     "allowMultiple": false,
     "defaultSection": "right"

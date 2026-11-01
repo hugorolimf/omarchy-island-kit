@@ -3,8 +3,8 @@
 # Island Kit
 
 **One plugin, the whole family.**
-A catalog in your bar that installs the Island and Glass plugins, and the shared
-look the Island plugins are built on.
+A catalog in your bar that installs and updates the Island and Glass plugins, and
+the shared look the Island plugins are built on.
 
 ![Island Kit catalog](preview.png)
 
@@ -14,6 +14,10 @@ look the Island plugins are built on.
 
 - 🧩 **Install once, pick the rest.** Add the Kit and every Island and Glass plugin
   is one click away in its catalog: install, enable or remove, or install them all.
+- 🔄 **Update from one place.** Each time the catalog opens it compares your plugins
+  with their GitHub repositories and offers **Update** or **Update all**. A plugin
+  you changed locally is never touched: it shows as changed instead. The Kit updates
+  itself the same way, last, and restarts the bar to load the new version.
 - 🆕 **Always up to date.** The list comes from this repository, so new plugins
   show up in the catalog without updating the Kit. Offline, it shows the list it
   shipped with.
@@ -52,9 +56,17 @@ opens their install page.
 ## How it installs
 
 Each button runs Omarchy's own `omarchy plugin add <repo> --enable --yes`
-(or `omarchy plugin enable` / `omarchy plugin remove <id> --yes`), one at a time,
+(or `omarchy plugin update <id> --yes` / `omarchy plugin enable` /
+`omarchy plugin remove <id> --yes`), one at a time,
 so everything goes through Omarchy's validation. Some plugins only appear after
 the shell restarts; the catalog offers a **Restart** button when that's needed.
+
+## How it checks for updates
+
+`check-updates.sh` runs when the catalog opens, at most once every two minutes, and
+only for the catalog's plugins you have installed. It runs `git fetch origin HEAD` in
+each one and compares commits; it never merges, and it doesn't run in the background.
+Updating is always your click.
 
 ## For plugin authors
 
