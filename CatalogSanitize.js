@@ -2,7 +2,8 @@
 
 // The catalog comes from the network, so nothing in it is trusted: it is
 // rebuilt here with only the known fields, strings of bounded length and
-// lists of bounded size, before the shell reads any of it.
+// lists of bounded size, before the shell reads any of it. The download
+// itself is cut at 256 KiB in a child process (remoteProc in CatalogStore).
 
 var MAX_PLUGINS = 64
 var MAX_SECTIONS = 16

@@ -245,7 +245,7 @@ Scope {
   }
   Process {
     id: remoteProc
-    command: ["curl", "-fsSL", "--max-time", "6", store.remoteUrl]
+    command: ["sh", "-c", "curl -fsSL --max-time 6 \"$1\" | head -c 262144", "sh", store.remoteUrl]
     stdout: StdioCollector {
       onStreamFinished: {
         store.offline = !store.useCatalog(text, true)
