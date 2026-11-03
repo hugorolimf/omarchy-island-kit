@@ -1,6 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Io
+import "CatalogSanitize.js" as Sanitize
 
 // What the catalog knows and does: the list from the Kit's repository (the
 // catalog.json shipped with it when offline), what's installed, what GitHub has
@@ -41,9 +42,8 @@ Scope {
     if (!listProc.running) listProc.running = true
   }
   function useCatalog(text, fromRemote) {
-    var c = null
-    try { c = JSON.parse(String(text || "")) } catch (e) { c = null }
-    if (!c || !Array.isArray(c.plugins)) return false
+    var c = Sanitize.parse(text)
+    if (!c) return false
     if (!fromRemote && catalog.plugins.length > 0) return true
     if (fromRemote && (c.version || 0) < (catalog.version || 0)) return true
     catalog = c
@@ -62,7 +62,7 @@ Scope {
     var pack = p ? p.pack : null
     if (!pack || typeof pack.length !== "number" || pack.length === 0) return [p]
     var list = []
-    for (var i = 0; i < pack.length; i++) list.push(pack[i])
+    for (var i = 0; i < Math.min(pack.length, Sanitize.MAX_PACK); i++) list.push(pack[i])
     return list
   }
   function stateOf(p) {
